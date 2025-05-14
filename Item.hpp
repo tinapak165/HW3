@@ -1,5 +1,5 @@
-#ifndef ITEM.HPP
-#define ITEM.HPP
+#ifndef ITEM_HPP
+#define ITEM_HPP
 
 #include<iostream>
 
