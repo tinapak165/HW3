@@ -9,11 +9,12 @@ class Fruit : public Item {
 
     public:
     // Fruit (){}
-    Fruit(int p ,std::string me = "kg", int a) : Item ( p , a) , measurment (me) {std::cout<<"fruit class";}
+    Fruit(int p , int a ,std::string me = "kg");
 
 
     
      void buying (){
+
         std::cout<<"buy function in Fruit class";
 
     }

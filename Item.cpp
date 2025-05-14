@@ -1,10 +1,16 @@
 #include "Item.hpp"
 #include <iostream>
+#include <stdexcept>
+
 using namespace std;
 
-Item::Item(int p, int){
+Item::Item(int a , int p){
 
-     cout<<"Item class constructor";
+    if (a <= 0 || p < 0 ){
+        throw invalid_argument(" cant be negative");
+        
+    }
+    cout<<"Item class constructor \n";
 
 }
 void Item::operator-( int i  ){
@@ -12,8 +18,18 @@ void Item::operator-( int i  ){
     this->available = this->available - i ;
 
 }
+bool Item::is_available(){
 
-void Item::buy(int b){
+  if ( this->available > 0 ){
+        return true;
+  }
+  else return false;
 
-    this - b ;
 }
+void Item::buy(int b){
+   if ( is_available())
+    *this - b ;
+}
+
+
+

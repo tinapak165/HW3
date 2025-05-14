@@ -12,11 +12,12 @@ class Item {
 
         int available;
     public:
-    
-        Item(int ,int){}
+
+        Item(int ,int );
 
 
         void operator-( int i);
+        bool is_available();
         void buy(int b);
 
 
