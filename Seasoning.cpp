@@ -33,7 +33,8 @@ void Seasoning::buy(int b){
     if(b > available)
         throw runtime_error("not enough item") ; 
     
-        *this- b ; 
+    set_available(available - b) ; 
+
 }
 void Seasoning::set_available(int a){
     available = a ; 
