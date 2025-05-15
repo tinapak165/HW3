@@ -1,27 +1,26 @@
 #ifndef ITEM_HPP
 #define ITEM_HPP
 
-#include<iostream>
-
+#include <iostream>
 class Item {
-    private :
+    private : 
 
         int price;
 
-        int measurment;
+        std::string name ; 
+
+        int masurment;
 
         int available;
-        int buynum;
     public:
 
-        Item(int ,int );
-        
-
-        void operator-( int );
-        bool is_available(int bn);
+        //Item(int ,int );
+        void operator-( int i);
+        bool is_available() const;
         void buy(int b);
-        int get_buynum();
-        // int set_buynum();
+        virtual std::string getInfo() const = 0 ;  
+        int get_available() const ; 
+        int getPrice() const ; 
 
 
 };
