@@ -30,14 +30,6 @@ bool Item::is_available()const{
   else return false;
 
 }
-void Item::buy(int b){
-    if ( !is_available())
-        throw runtime_error("item not available") ; 
-    if(b > available)
-        throw runtime_error("not enough item") ; 
-    
-        *this- b ; 
-}
 int Item::get_available() const {
     return available; 
 }
