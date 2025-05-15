@@ -4,44 +4,43 @@
 
 using namespace std;
 
-Item::Item(int p =1 , int a = 10){
+// Item::Item(int a , int p){
 
-    if (a <= 0 || p < 0 ){
-        throw invalid_argument(" cant be negative");
+//     if (a <= 0 || p < 0 ){
+//         throw invalid_argument(" cant be negative");
         
-    }
-    cout<<"Item class constructor \n";
+//     }
+//     cout<<"Item class constructor \n";
+//     available = a ;
+//     price = p ; 
 
-}
+// }
 void Item::operator-( int i  ){
 
     this->available = this->available - i ;
 
 }
+bool Item::is_available()const{
 
-// buynum is how many what customer wants
-int Item::get_buynum(){
-    cout<<"how many do you want? example: 2 ";
-    cin>> buynum;
-    return buynum;
-}
-
-
-bool Item::is_available(int buynum){
-
-   if (this->available > buynum ){return true;}
-
-   else if ( this->available > 0 ){return true;}
-
-   else return false;
+  if ( this->available > 0 ){
+        return true;
+  }
+  else return false;
 
 }
-
 void Item::buy(int b){
-   if ( is_available( buynum))
-   {*this - b ;}
-
-    else cerr<< "Item is not availalbe";
+    if ( !is_available())
+        throw runtime_error("item not available") ; 
+    if(b > available)
+        throw runtime_error("not enough item") ; 
+    
+        *this- b ; 
+}
+int Item::get_available() const {
+    return available; 
+}
+int Item::getPrice() const { 
+    return price; 
 }
 
 
