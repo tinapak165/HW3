@@ -26,3 +26,14 @@ int Snack::get_price()const{
 int Snack::get_available()const{
     return available ; 
 }
+void Snack::buy(int b){
+    if ( !is_available())
+        throw runtime_error("item not available") ; 
+    if(b > available)
+        throw runtime_error("not enough item") ; 
+    
+    set_available(available - b); 
+}
+void Snack::set_available(int a){
+    available = a ; 
+}
