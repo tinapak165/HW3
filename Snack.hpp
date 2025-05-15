@@ -1,5 +1,6 @@
+#ifndef SNACK_HPP
+#define SNACK_HPP
 #include <string>
-#include <vector>
 #include "Item.hpp"
 
 class Snack : public Item {
@@ -16,8 +17,11 @@ class Snack : public Item {
         //void buying () ; 
         std::string getInfo()const ;
         std::string get_name()const ; 
+        void buy(int b) ;
         int get_price() const; 
         int get_available()const ; 
-    
+        void set_available(int a) ; 
 
 };
+
+#endif
