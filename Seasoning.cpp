@@ -27,3 +27,14 @@ int Seasoning::get_price()const{
 int Seasoning::get_available()const{
     return available ; 
 }
+void Seasoning::buy(int b){
+    if ( !is_available())
+        throw runtime_error("item not available") ; 
+    if(b > available)
+        throw runtime_error("not enough item") ; 
+    
+        *this- b ; 
+}
+void Seasoning::set_available(int a){
+    available = a ; 
+}
