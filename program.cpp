@@ -10,7 +10,7 @@
 using namespace std ;
 
 vector<Item*> Program::items ; 
-vector<string> names ; 
+vector<string> Program::names ; 
 
 string Program::showItems(){
     string result ; 
@@ -28,12 +28,17 @@ void Program::Run(){
     try
     {
         items.push_back(new Fruit("apple",10,1))  ; 
-        items.push_back(new Fruit ("kiwi" , 6, 7)) ; 
+        names.push_back("apple") ; 
+        items.push_back(new Fruit ("kiwi" , 6, 7)) ;
+        names.push_back("kiwi") ;  
         items.push_back(new Snack("sandwitch" , 4 , 15)) ;
+        names.push_back("sandwitch") ; 
         items.push_back(new Seasoning("chertopert" , 4 , 12)) ;  
+        names.push_back("chertooert") ; 
 
         string targetItem  ;
         int TedadTarget ; 
+        bool found ; 
 
         cout << "Hello welcome to our shop!" << endl << "here are the items: " << endl ; 
         cout << showItems() ;
@@ -44,34 +49,42 @@ void Program::Run(){
         auto it  = find(names.begin() , names.end() , targetItem) ; 
 
         if(it != names.end()){
-            cout << "found " << *it ;  
+            cout << "found " << *it << endl  ;  
+            found = true ; 
+
+        }
+        else{
+            cout << "no found" << endl;
+            found = false ;  
+
+
+        }
+
+        if(found){
+            cout << "how many " << targetItem << " do you want to buy? " << endl ; 
+            cin >> TedadTarget ; 
+            Program p ; 
+            p.Buying(targetItem,  TedadTarget) ; 
+             
+            //cout << "your bank account: " ; //showaccount()
+            cout << "what else do you want to buy? " ; 
+
         }
         else
-            cout << "no " << *it ; 
-
-        // bool found ; 
-
-        // for(const string & name: names){
-        //     if (targetItem == name){
-        //         found = true ; 
-        //         break ;
-        //     }
-        //     else
-        //         found = false ; 
-        // }
-        // if(found){
-        //     cout << "how many " << targetItem << " do you want to buy? " << endl ; 
-        //     cin >> TedadTarget ; 
-        //     //buy() ;    
-        //     cout << "your bank account: " ; //showaccount()
-        //     cout << "what else do you want to buy? " ; 
-
-        // }
-        // else
-        //     cerr << "not found!!" << endl ;  
+            cerr << "not found!!" << endl ;  
     }
     catch(const exception & e){
         std::cerr << e.what() << '\n';
     }
+}
 
+void Program::Buying(const std::string ItemName , int tedad){
+    for(auto item : items){
+        if(item ->get_Name() == ItemName){
+            item->buy(tedad) ; 
+            cout << "you bought " << tedad << " " << ItemName << " !!" ;
+            return; 
+        }
+    }
+    cout << "item not found!! " << endl ; 
 }
