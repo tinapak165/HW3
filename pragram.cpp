@@ -8,7 +8,7 @@ int main(){
     try
     {
         
-        Fruit apple(3 , 1);
+        Fruit apple(3 , 100 );
            
        
     }

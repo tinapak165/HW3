@@ -17,11 +17,11 @@ class Item {
         Item(int ,int );
         
 
-        void operator-( int i);
-        bool is_available();
+        void operator-( int );
+        bool is_available(int bn);
         void buy(int b);
-        void get_buynum();
-        void set_buynum();
+        int get_buynum();
+        // int set_buynum();
 
 
 };
