@@ -12,7 +12,6 @@ class Seasoning : public Item {
         std::string name ; 
 
     public:
-        static std::vector<std::string> names ; 
         Seasoning( std::string name ,int p , int a ,std::string me = "g");
         //void buying () ; 
         std::string getInfo()const ;

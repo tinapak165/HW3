@@ -10,7 +10,6 @@ class Fruit : public Item {
     std::string name ; 
 
     public:
-    static std::vector<std::string> names ; 
     Fruit( std::string name ,int p , int a ,std::string me = "kg");
     void buying () ; 
     std::string getInfo()const ;

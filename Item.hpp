@@ -1,6 +1,8 @@
 #ifndef ITEM_HPP
 #define ITEM_HPP
 
+#include <vector>
+
 #include <iostream>
 class Item {
     private : 
@@ -13,8 +15,9 @@ class Item {
 
         int available;
     public:
+        static std::vector<std::string> names ; 
 
-        //Item(int ,int );
+        Item(std::string , int ,int );
         void operator-( int i);
         bool is_available() const;
         void buy(int b);

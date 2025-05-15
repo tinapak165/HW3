@@ -35,20 +35,40 @@ void Program::Run(){
         string targetItem  ;
         int TedadTarget ; 
 
-        //seasoning (8 , 9) ; 
-
         cout << "Hello welcome to our shop!" << endl << "here are the items: " << endl ; 
         cout << showItems() ;
+        //cout << "and here is your bank account: " ;//showaccount()?? ; 
         cout << "what do you want to buy? " ;
-        getline(cin, targetItem) ; 
+        cin >> targetItem ; 
 
-        if(binary_search(names.begin() , names.end() , targetItem)){
-            cout << "how many " << targetItem << " do you want to buy? " << endl ; 
-            cin >> TedadTarget ; 
-                //buy() ;    
-            }
+        auto it  = find(names.begin() , names.end() , targetItem) ; 
+
+        if(it != names.end()){
+            cout << "found " << *it ;  
+        }
         else
-            cerr << "not found!!" << endl ;  
+            cout << "no " << *it ; 
+
+        // bool found ; 
+
+        // for(const string & name: names){
+        //     if (targetItem == name){
+        //         found = true ; 
+        //         break ;
+        //     }
+        //     else
+        //         found = false ; 
+        // }
+        // if(found){
+        //     cout << "how many " << targetItem << " do you want to buy? " << endl ; 
+        //     cin >> TedadTarget ; 
+        //     //buy() ;    
+        //     cout << "your bank account: " ; //showaccount()
+        //     cout << "what else do you want to buy? " ; 
+
+        // }
+        // else
+        //     cerr << "not found!!" << endl ;  
     }
     catch(const exception & e){
         std::cerr << e.what() << '\n';

@@ -12,7 +12,6 @@ class Snack : public Item {
         std::string name ; 
 
     public:
-        static std::vector<std::string> names ; 
         Snack( std::string name ,int p , int a ,std::string me = "Package");
         //void buying () ; 
         std::string getInfo()const ;

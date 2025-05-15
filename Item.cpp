@@ -1,20 +1,28 @@
+
+
 #include "Item.hpp"
 #include <iostream>
 #include <stdexcept>
 
 using namespace std;
+std::vector<std::string> Item::names; 
 
-// Item::Item(int a , int p){
 
-//     if (a <= 0 || p < 0 ){
-//         throw invalid_argument(" cant be negative");
+Item::Item(std::string n , int a , int p){
+
+    if (a <= 0 || p < 0 ){
+        throw invalid_argument(" cant be negative");
         
-//     }
-//     cout<<"Item class constructor \n";
-//     available = a ;
-//     price = p ; 
+    }
+    cout<<"Item class constructor \n";
+    available = a ;
+    price = p ; 
+    name = n;
+    names.push_back(name) ;
 
-// }
+
+
+}
 void Item::operator-( int i  ){
 
     this->available = this->available - i ;

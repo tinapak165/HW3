@@ -4,17 +4,14 @@
 #include "Fruit.hpp"
 using namespace std;
 
-std::vector<std::string> Fruit::names; 
 
-Fruit::Fruit (std::string n , int p , int a , string me) : measurment(me){
+Fruit::Fruit (std::string n , int p , int a , string me) :Item(n,p , a) , measurment(me){
     if (a <= 0 || p < 0 )
         throw invalid_argument("an item can not be negative!!");
     else{
         available = a ;
         price = p ; 
         name = n ; 
-        names.push_back(n) ;
-        sort(names.begin() , names.end()) ; 
     }
 }
 
