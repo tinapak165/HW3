@@ -1,0 +1,17 @@
+#ifndef PROGRAM_HPP
+#define PROGRAM_HPP
+
+#include <vector>
+#include "Item.hpp"
+
+class Program{
+    private:
+        static std::vector<Item*> items ; 
+    public:
+        static void Run() ;
+        static  std::string showItems() ;  
+        static void clean() ; 
+
+};
+
+#endif
