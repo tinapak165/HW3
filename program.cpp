@@ -1,9 +1,9 @@
 #include "program.hpp"
 #include "Item.hpp"
 #include "Fruit.hpp"
+#include "Snack.hpp"
 #include <algorithm>
 #include <iostream>
-#include <memory>
 #include <vector>
 
 using namespace std ;
@@ -28,12 +28,12 @@ void Program::Run(){
     {
         items.push_back(new Fruit("apple",10,1))  ; 
         items.push_back(new Fruit ("kiwi" , 6, 7)) ; 
+        items.push_back(new Snack("sandwitch" , 4 , 15)) ; 
 
         string targetItem  ;
         int TedadTarget ; 
 
-        //Snack sand(6,8) ; 
-        //seasoning s(8 , 9) ; 
+        //seasoning (8 , 9) ; 
 
         cout << "Hello welcome to our shop!" << endl << "here are the items: " << endl ; 
         cout << showItems() ;
@@ -48,11 +48,9 @@ void Program::Run(){
         else
             cerr << "not found!!" << endl ; 
         
-        // items[0] -> buy(1) ; //??
        
     }
-    catch(const exception & e)
-    {
+    catch(const exception & e){
         std::cerr << e.what() << '\n';
     }
 
