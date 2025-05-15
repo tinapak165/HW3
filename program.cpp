@@ -41,38 +41,46 @@ void Program::Run(){
         bool found ; 
 
         cout << "Hello welcome to our shop!" << endl << "here are the items: " << endl ; 
-        cout << showItems() ;
-        //cout << "and here is your bank account: " ;//showaccount()?? ; 
-        cout << "what do you want to buy? " ;
-        cin >> targetItem ; 
 
-        auto it  = find(names.begin() , names.end() , targetItem) ; 
-
-        if(it != names.end()){
-            cout << "found " << *it << endl  ;  
-            found = true ; 
+        while(true){
+            cout << showItems() ;
+            //cout << "and here is your bank account: " ;//showaccount()?? ; 
+            cout << "what do you want to buy? " ;
+            
+            cin >> targetItem ; 
+            if(targetItem == "nothing") {
+                cout << "bye bye!" << endl ; 
+                break  ;
+            }
+    
+            auto it  = find(names.begin() , names.end() , targetItem) ; 
+    
+            if(it != names.end()){
+                cout << "found " << *it << endl  ;  
+                found = true ; 
+    
+            }
+            else{
+                cout << "no found" << endl;
+                found = false ;  
+            }
+    
+            if(found){
+                cout << "how many " << targetItem << " do you want to buy? " ; 
+                cin >> TedadTarget ; 
+                Program p ; 
+                p.Buying(targetItem,  TedadTarget) ;
+    
+                 
+                //cout << "your bank account: " ; //showaccount()
+                cout <<  endl << "what else do you want to buy? " << endl; 
+            }
+            else
+                cerr << "not found!!" << endl ;  
+        }
 
         }
-        else{
-            cout << "no found" << endl;
-            found = false ;  
 
-
-        }
-
-        if(found){
-            cout << "how many " << targetItem << " do you want to buy? " << endl ; 
-            cin >> TedadTarget ; 
-            Program p ; 
-            p.Buying(targetItem,  TedadTarget) ; 
-             
-            //cout << "your bank account: " ; //showaccount()
-            cout << "what else do you want to buy? " ; 
-
-        }
-        else
-            cerr << "not found!!" << endl ;  
-    }
     catch(const exception & e){
         std::cerr << e.what() << '\n';
     }
