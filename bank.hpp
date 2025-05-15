@@ -6,7 +6,7 @@ class Bank{
     public:
     bool withdraw(double , double ); //only use for person
     bool deposit(double , double ); // only used for shop
-    // void getBalance()const;
+    void getBalance()const;
     
     
     private:
