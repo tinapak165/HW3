@@ -27,3 +27,15 @@ int Fruit::get_price()const{
 int Fruit::get_available()const{
     return available ; 
 }
+void Fruit::set_available(int a){
+    available = a ; 
+}
+void Fruit::buy(int b){
+    if ( !is_available())
+        throw runtime_error("item not available") ; 
+    if(b > available)
+        throw runtime_error("not enough item") ; 
+    
+    set_available(available - b); 
+
+}
