@@ -38,7 +38,7 @@ void Program::Run(){
         cout << "Hello welcome to our shop!" << endl << "here are the items: " << endl ; 
         cout << showItems() ;
         cout << "what do you want to buy? " ;
-        cin >> targetItem ; 
+        getline(cin, targetItem) ; 
 
         if(binary_search(names.begin() , names.end() , targetItem)){
             cout << "how many " << targetItem << " do you want to buy? " << endl ; 
