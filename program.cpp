@@ -2,6 +2,7 @@
 #include "Item.hpp"
 #include "Fruit.hpp"
 #include "Snack.hpp"
+#include "Seasoning.hpp"
 #include <algorithm>
 #include <iostream>
 #include <vector>
@@ -28,7 +29,8 @@ void Program::Run(){
     {
         items.push_back(new Fruit("apple",10,1))  ; 
         items.push_back(new Fruit ("kiwi" , 6, 7)) ; 
-        items.push_back(new Snack("sandwitch" , 4 , 15)) ; 
+        items.push_back(new Snack("sandwitch" , 4 , 15)) ;
+        items.push_back(new Seasoning("chertopert" , 4 , 12)) ;  
 
         string targetItem  ;
         int TedadTarget ; 
@@ -46,9 +48,7 @@ void Program::Run(){
                 //buy() ;    
             }
         else
-            cerr << "not found!!" << endl ; 
-        
-       
+            cerr << "not found!!" << endl ;  
     }
     catch(const exception & e){
         std::cerr << e.what() << '\n';
