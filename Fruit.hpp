@@ -11,11 +11,12 @@ class Fruit : public Item {
 
     public:
     Fruit( std::string name ,int p , int a ,std::string me = "kg");
-    void buying () ; 
+    void buy(int b) ; 
     std::string getInfo()const ;
     std::string get_name()const ; 
     int get_price() const; 
     int get_available()const ; 
+    void set_available(int a) ; 
     
 
 };
