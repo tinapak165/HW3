@@ -8,16 +8,13 @@ int main(){
     try
     {
         
-        Fruit apple( 3 , 1);
+        Fruit apple(3 , 1);
            
        
     }
     catch(const exception & e)
     {
-        std::cerr << e.what() << '\n';
+        cerr << e.what() << '\n';
     }
-    switch (){
-    cout<< " chi mikhai";
-    cout <<
-        
+    
  }

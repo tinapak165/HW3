@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Item::Item(int a , int p){
+Item::Item(int a , int p ){
 
     if (a <= 0 || p < 0 ){
         throw invalid_argument(" cant be negative");

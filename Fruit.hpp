@@ -2,14 +2,16 @@
 #include "Item.hpp"
 
 class Fruit : public Item {
-    
-    int price;
-    int available;
-    std::string measurment ;
+
+    private:
+   
+      int price;
+      int available;
+      std::string measurment ;
 
     public:
     // Fruit (){}
-    Fruit(int p , int a ,std::string me = "kg");
+     Fruit(int , int ,std::string);
 
 
     
@@ -17,6 +19,6 @@ class Fruit : public Item {
 
         std::cout<<"buy function in Fruit class";
 
-    }
+        }
 
 };
