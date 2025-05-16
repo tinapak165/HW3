@@ -51,8 +51,8 @@ void Program::Run(){
             if(targetItem == "nothing") {
                 cout << "bye bye!" << endl ; 
                 break  ;
-            }
-    
+            }   
+            
             auto it  = find(names.begin() , names.end() , targetItem) ; 
     
             if(it != names.end()){
