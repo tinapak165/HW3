@@ -96,3 +96,10 @@ void Program::Buying(const std::string ItemName , int tedad){
     }
     cout << "item not found!! " << endl ; 
 }
+
+Program::~Program(){
+    for( auto item : items){
+        delete item ; 
+    }
+
+}
