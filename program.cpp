@@ -19,11 +19,7 @@ string Program::showItems(){
     
     return result ; 
 }
-void Program::clean(){
-    for(auto item : items)
-        delete item ; 
 
-}
 void Program::Run(){
     try
     {
@@ -52,7 +48,7 @@ void Program::Run(){
                 cout << "bye bye!" << endl ; 
                 break  ;
             }   
-            
+
             auto it  = find(names.begin() , names.end() , targetItem) ; 
     
             if(it != names.end()){
@@ -73,10 +69,14 @@ void Program::Run(){
     
                  
                 //cout << "your bank account: " ; //showaccount()
-                cout <<  endl << "what else do you want to buy? " << endl; 
             }
             else
-                cerr << "not found!!" << endl ;  
+                cerr << "not found!!" << endl ; 
+                 
+                cout <<  endl << "what else do you want to buy? " << endl;        
+            
+              
+
         }
 
         }
