@@ -1,5 +1,7 @@
+#ifndef SEASONING_HPP
+#define SEASONING_HPP
+
 #include <string>
-#include <vector>
 #include "Item.hpp"
 
 class Seasoning : public Item {
@@ -13,11 +15,13 @@ class Seasoning : public Item {
 
     public:
         Seasoning( std::string name ,int p , int a ,std::string me = "g");
-        //void buying () ; 
-        std::string getInfo()const ;
+        std::string getInfo()const override ;
         std::string get_name()const ; 
         int get_price() const; 
+        void buy(int b) override ; 
         int get_available()const ; 
-    
+        void set_available(int a) ; 
 
 };
+
+#endif

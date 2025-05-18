@@ -7,12 +7,12 @@
 class Program{
     private:
         static std::vector<Item*> items ; 
-    public:
         static std::vector<std::string> names ; 
+    public:
         static void Run() ;
         static  std::string showItems() ;  
-        static void clean() ; 
         void Buying(const std::string ItemName , int tedad) ; 
+        ~Program() ; 
 
 };
 
