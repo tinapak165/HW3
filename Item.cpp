@@ -6,6 +6,8 @@
 
 using namespace std;
 
+std::vector<std::string> Item::names; 
+
 
 Item::Item(std::string n , int a , int p){
 
@@ -13,9 +15,14 @@ Item::Item(std::string n , int a , int p){
         throw invalid_argument(" cant be negative");
         
     }
+    cout<<"Item class constructor \n";
     available = a ;
     price = p ; 
     name = n;
+    names.push_back(name) ;
+
+
+
 }
 void Item::operator-( int i  ){
 
@@ -44,8 +51,6 @@ int Item::get_available() const {
 int Item::getPrice() const { 
     return price; 
 }
-std::string Item::get_Name()const{
-    return name ; 
-}
+
 
 

@@ -1,0 +1,333 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/w64devkit/bin/cc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification could not be found in:
+        C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/4.0.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/w64devkit/bin/cc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/4.0.2/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/w64devkit/bin/c++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification could not be found in:
+        C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/4.0.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/w64devkit/bin/c++.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/4.0.2/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-ocid8u"
+      binary: "C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-ocid8u"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-ocid8u'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/w64devkit/bin/mingw32-make.exe -f Makefile cmTC_bbafc/fast
+        make  -f CMakeFiles\\cmTC_bbafc.dir\\build.make CMakeFiles/cmTC_bbafc.dir/build
+        make[1]: Entering directory 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-ocid8u'
+        Building C object CMakeFiles/cmTC_bbafc.dir/CMakeCCompilerABI.c.obj
+        C:\\w64devkit\\bin\\cc.exe   -v -o CMakeFiles\\cmTC_bbafc.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=cc
+        Target: x86_64-w64-mingw32
+        Configured with: /gcc-15.1.0/configure --prefix=/w64devkit --with-sysroot=/w64devkit --with-native-system-header-dir=/include --target=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-static --disable-shared --with-pic --with-gmp-include=/deps/include --with-gmp-lib=/deps/lib --with-mpc-include=/deps/include --with-mpc-lib=/deps/lib --with-mpfr-include=/deps/include --with-mpfr-lib=/deps/lib --enable-languages=c,c++,fortran --enable-libgomp --enable-threads=posix --enable-version-specific-runtime-libs --disable-libstdcxx-verbose --disable-dependency-tracking --disable-lto --disable-multilib --disable-nls --disable-win32-registry --enable-mingw-wildcard CFLAGS_FOR_TARGET=-Os CXXFLAGS_FOR_TARGET=-Os LDFLAGS_FOR_TARGET=-s CFLAGS=-Os CXXFLAGS=-Os LDFLAGS=-s
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 15.1.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_bbafc.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_bbafc.dir\\'
+         C:/w64devkit/bin/../libexec/gcc/x86_64-w64-mingw32/15.1.0/cc1.exe -quiet -v -iprefix C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/ -isysroot C:/w64devkit/bin/../../w64devkit -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_bbafc.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\Tina\\AppData\\Local\\Temp\\ccIArvQd.s
+        GNU C23 (GCC) version 15.1.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 15.1.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/include"
+        ignoring duplicate directory "C:/w64devkit/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/15.1.0/include"
+        ignoring nonexistent directory "C:/w64devkit/bin/../../w64devkit/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../include"
+        ignoring duplicate directory "C:/w64devkit/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/15.1.0/include-fixed"
+        ignoring nonexistent directory "C:/w64devkit/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/include
+         C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/include-fixed
+         C:/w64devkit/bin/../../w64devkit/include
+        End of search list.
+        Compiler executable checksum: ea94c2a8c01b9c0dac297db65383bfc3
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_bbafc.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_bbafc.dir\\'
+         as -v -o CMakeFiles\\cmTC_bbafc.dir\\CMakeCCompilerABI.c.obj C:\\Users\\Tina\\AppData\\Local\\Temp\\ccIArvQd.s
+        GNU assembler version 2.44 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.44
+        COMPILER_PATH=C:/w64devkit/bin/../libexec/gcc/x86_64-w64-mingw32/15.1.0/;C:/w64devkit/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/;C:/w64devkit/bin/../lib/gcc/;C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib/;C:/w64devkit/bin/../../w64devkit/lib/../lib/;C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../;C:/w64devkit/bin/../../w64devkit/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_bbafc.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_bbafc.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_bbafc.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_bbafc.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_bbafc.dir/objects.a
+        C:\\w64devkit\\bin\\ar.exe qc CMakeFiles\\cmTC_bbafc.dir/objects.a @CMakeFiles\\cmTC_bbafc.dir\\objects1.rsp
+        C:\\w64devkit\\bin\\cc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_bbafc.dir/objects.a -Wl,--no-whole-archive -o cmTC_bbafc.exe -Wl,--out-implib,libcmTC_bbafc.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        Using built-in specs.
+        COLLECT_GCC=cc
+        COLLECT_LTO_WRAPPER=C:/w64devkit/bin/../libexec/gcc/x86_64-w64-mingw32/15.1.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: /gcc-15.1.0/configure --prefix=/w64devkit --with-sysroot=/w64devkit --with-native-system-header-dir=/include --target=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-static --disable-shared --with-pic --with-gmp-include=/deps/include --with-gmp-lib=/deps/lib --with-mpc-include=/deps/include --with-mpc-lib=/deps/lib --with-mpfr-include=/deps/include --with-mpfr-lib=/deps/lib --enable-languages=c,c++,fortran --enable-libgomp --enable-threads=posix --enable-version-specific-runtime-libs --disable-libstdcxx-verbose --disable-dependency-tracking --disable-lto --disable-multilib --disable-nls --disable-win32-registry --enable-mingw-wildcard CFLAGS_FOR_TARGET=-Os CXXFLAGS_FOR_TARGET=-Os LDFLAGS_FOR_TARGET=-s CFLAGS=-Os CXXFLAGS=-Os LDFLAGS=-s
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 15.1.0 (GCC) 
+        COMPILER_PATH=C:/w64devkit/bin/../libexec/gcc/x86_64-w64-mingw32/15.1.0/;C:/w64devkit/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/;C:/w64devkit/bin/../lib/gcc/;C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib/;C:/w64devkit/bin/../../w64devkit/lib/../lib/;C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../;C:/w64devkit/bin/../../w64devkit/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bbafc.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_bbafc.'
+         C:/w64devkit/bin/../libexec/gcc/x86_64-w64-mingw32/15.1.0/collect2.exe --sysroot=C:/w64devkit/bin/../../w64devkit -m i386pep -Bdynamic -o cmTC_bbafc.exe C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib/crt2.o C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/crtbegin.o -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0 -LC:/w64devkit/bin/../lib/gcc -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib -LC:/w64devkit/bin/../../w64devkit/lib/../lib -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../.. -LC:/w64devkit/bin/../../w64devkit/lib -v --whole-archive CMakeFiles\\cmTC_bbafc.dir/objects.a --no-whole-archive --out-implib libcmTC_bbafc.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/crtend.o
+        collect2 version 15.1.0
+        C:\\w64devkit\\bin/ld.exe --sysroot=C:/w64devkit/bin/../../w64devkit -m i386pep -Bdynamic -o cmTC_bbafc.exe C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib/crt2.o C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/crtbegin.o -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0 -LC:/w64devkit/bin/../lib/gcc -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib -LC:/w64devkit/bin/../../w64devkit/lib/../lib -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../.. -LC:/w64devkit/bin/../../w64devkit/lib -v --whole-archive CMakeFiles\\cmTC_bbafc.dir/objects.a --no-whole-archive --out-implib libcmTC_bbafc.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/crtend.o
+        GNU ld (GNU Binutils) 2.44
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bbafc.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_bbafc.'
+        make[1]: Leaving directory 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-ocid8u'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: C:/w64devkit/bin/cc.exe"
+    directories:
+      source: "C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-dahj73"
+      binary: "C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-dahj73"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-dahj73'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/w64devkit/bin/mingw32-make.exe -f Makefile cmTC_8b3ef/fast
+        make  -f CMakeFiles\\cmTC_8b3ef.dir\\build.make CMakeFiles/cmTC_8b3ef.dir/build
+        make[1]: Entering directory 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-dahj73'
+        Building C object CMakeFiles/cmTC_8b3ef.dir/testCCompiler.c.obj
+        C:\\w64devkit\\bin\\cc.exe    -o CMakeFiles\\cmTC_8b3ef.dir\\testCCompiler.c.obj -c C:\\Users\\Tina\\Desktop\\HW3-1\\HW3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dahj73\\testCCompiler.c
+        Linking C executable cmTC_8b3ef.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_8b3ef.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_8b3ef.dir/objects.a
+        C:\\w64devkit\\bin\\ar.exe qc CMakeFiles\\cmTC_8b3ef.dir/objects.a @CMakeFiles\\cmTC_8b3ef.dir\\objects1.rsp
+        C:\\w64devkit\\bin\\cc.exe -Wl,--whole-archive CMakeFiles\\cmTC_8b3ef.dir/objects.a -Wl,--no-whole-archive -o cmTC_8b3ef.exe -Wl,--out-implib,libcmTC_8b3ef.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_8b3ef.dir\\linkLibs.rsp
+        make[1]: Leaving directory 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-dahj73'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-tqsbyg"
+      binary: "C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-tqsbyg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-tqsbyg'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/w64devkit/bin/mingw32-make.exe -f Makefile cmTC_a8d28/fast
+        make  -f CMakeFiles\\cmTC_a8d28.dir\\build.make CMakeFiles/cmTC_a8d28.dir/build
+        make[1]: Entering directory 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-tqsbyg'
+        Building CXX object CMakeFiles/cmTC_a8d28.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\w64devkit\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_a8d28.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+        Using built-in specs.
+        COLLECT_GCC=c++
+        Target: x86_64-w64-mingw32
+        Configured with: /gcc-15.1.0/configure --prefix=/w64devkit --with-sysroot=/w64devkit --with-native-system-header-dir=/include --target=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-static --disable-shared --with-pic --with-gmp-include=/deps/include --with-gmp-lib=/deps/lib --with-mpc-include=/deps/include --with-mpc-lib=/deps/lib --with-mpfr-include=/deps/include --with-mpfr-lib=/deps/lib --enable-languages=c,c++,fortran --enable-libgomp --enable-threads=posix --enable-version-specific-runtime-libs --disable-libstdcxx-verbose --disable-dependency-tracking --disable-lto --disable-multilib --disable-nls --disable-win32-registry --enable-mingw-wildcard CFLAGS_FOR_TARGET=-Os CXXFLAGS_FOR_TARGET=-Os LDFLAGS_FOR_TARGET=-s CFLAGS=-Os CXXFLAGS=-Os LDFLAGS=-s
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 15.1.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a8d28.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_a8d28.dir\\'
+         C:/w64devkit/bin/../libexec/gcc/x86_64-w64-mingw32/15.1.0/cc1plus.exe -quiet -v -iprefix C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/ -isysroot C:/w64devkit/bin/../../w64devkit -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_a8d28.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\Tina\\AppData\\Local\\Temp\\ccF3DIip.s
+        GNU C++17 (GCC) version 15.1.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 15.1.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/include"
+        ignoring duplicate directory "C:/w64devkit/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++"
+        ignoring duplicate directory "C:/w64devkit/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32"
+        ignoring duplicate directory "C:/w64devkit/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/backward"
+        ignoring duplicate directory "C:/w64devkit/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/15.1.0/include"
+        ignoring nonexistent directory "C:/w64devkit/bin/../../w64devkit/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../include"
+        ignoring duplicate directory "C:/w64devkit/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/15.1.0/include-fixed"
+        ignoring nonexistent directory "C:/w64devkit/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++
+         C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32
+         C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/backward
+         C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/include
+         C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/include-fixed
+         C:/w64devkit/bin/../../w64devkit/include
+        End of search list.
+        Compiler executable checksum: 84c224e7c2029a896d3792e27a673352
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a8d28.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_a8d28.dir\\'
+         as -v -o CMakeFiles\\cmTC_a8d28.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Tina\\AppData\\Local\\Temp\\ccF3DIip.s
+        GNU assembler version 2.44 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.44
+        COMPILER_PATH=C:/w64devkit/bin/../libexec/gcc/x86_64-w64-mingw32/15.1.0/;C:/w64devkit/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/;C:/w64devkit/bin/../lib/gcc/;C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib/;C:/w64devkit/bin/../../w64devkit/lib/../lib/;C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../;C:/w64devkit/bin/../../w64devkit/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a8d28.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_a8d28.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_a8d28.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_a8d28.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_a8d28.dir/objects.a
+        C:\\w64devkit\\bin\\ar.exe qc CMakeFiles\\cmTC_a8d28.dir/objects.a @CMakeFiles\\cmTC_a8d28.dir\\objects1.rsp
+        C:\\w64devkit\\bin\\c++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_a8d28.dir/objects.a -Wl,--no-whole-archive -o cmTC_a8d28.exe -Wl,--out-implib,libcmTC_a8d28.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        Using built-in specs.
+        COLLECT_GCC=c++
+        COLLECT_LTO_WRAPPER=C:/w64devkit/bin/../libexec/gcc/x86_64-w64-mingw32/15.1.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: /gcc-15.1.0/configure --prefix=/w64devkit --with-sysroot=/w64devkit --with-native-system-header-dir=/include --target=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-static --disable-shared --with-pic --with-gmp-include=/deps/include --with-gmp-lib=/deps/lib --with-mpc-include=/deps/include --with-mpc-lib=/deps/lib --with-mpfr-include=/deps/include --with-mpfr-lib=/deps/lib --enable-languages=c,c++,fortran --enable-libgomp --enable-threads=posix --enable-version-specific-runtime-libs --disable-libstdcxx-verbose --disable-dependency-tracking --disable-lto --disable-multilib --disable-nls --disable-win32-registry --enable-mingw-wildcard CFLAGS_FOR_TARGET=-Os CXXFLAGS_FOR_TARGET=-Os LDFLAGS_FOR_TARGET=-s CFLAGS=-Os CXXFLAGS=-Os LDFLAGS=-s
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 15.1.0 (GCC) 
+        COMPILER_PATH=C:/w64devkit/bin/../libexec/gcc/x86_64-w64-mingw32/15.1.0/;C:/w64devkit/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/;C:/w64devkit/bin/../lib/gcc/;C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib/;C:/w64devkit/bin/../../w64devkit/lib/../lib/;C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../;C:/w64devkit/bin/../../w64devkit/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8d28.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a8d28.'
+         C:/w64devkit/bin/../libexec/gcc/x86_64-w64-mingw32/15.1.0/collect2.exe --sysroot=C:/w64devkit/bin/../../w64devkit -m i386pep -Bdynamic -o cmTC_a8d28.exe C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib/crt2.o C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/crtbegin.o -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0 -LC:/w64devkit/bin/../lib/gcc -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib -LC:/w64devkit/bin/../../w64devkit/lib/../lib -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../.. -LC:/w64devkit/bin/../../w64devkit/lib -v --whole-archive CMakeFiles\\cmTC_a8d28.dir/objects.a --no-whole-archive --out-implib libcmTC_a8d28.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/crtend.o
+        collect2 version 15.1.0
+        C:\\w64devkit\\bin/ld.exe --sysroot=C:/w64devkit/bin/../../w64devkit -m i386pep -Bdynamic -o cmTC_a8d28.exe C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib/crt2.o C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/crtbegin.o -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0 -LC:/w64devkit/bin/../lib/gcc -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../lib -LC:/w64devkit/bin/../../w64devkit/lib/../lib -LC:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../.. -LC:/w64devkit/bin/../../w64devkit/lib -v --whole-archive CMakeFiles\\cmTC_a8d28.dir/objects.a --no-whole-archive --out-implib libcmTC_a8d28.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/w64devkit/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/crtend.o
+        GNU ld (GNU Binutils) 2.44
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8d28.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a8d28.'
+        make[1]: Leaving directory 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-tqsbyg'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working CXX compiler: C:/w64devkit/bin/c++.exe"
+    directories:
+      source: "C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-b4c1sg"
+      binary: "C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-b4c1sg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-b4c1sg'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/w64devkit/bin/mingw32-make.exe -f Makefile cmTC_cd48a/fast
+        make  -f CMakeFiles\\cmTC_cd48a.dir\\build.make CMakeFiles/cmTC_cd48a.dir/build
+        make[1]: Entering directory 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-b4c1sg'
+        Building CXX object CMakeFiles/cmTC_cd48a.dir/testCXXCompiler.cxx.obj
+        C:\\w64devkit\\bin\\c++.exe    -o CMakeFiles\\cmTC_cd48a.dir\\testCXXCompiler.cxx.obj -c C:\\Users\\Tina\\Desktop\\HW3-1\\HW3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b4c1sg\\testCXXCompiler.cxx
+        Linking CXX executable cmTC_cd48a.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_cd48a.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_cd48a.dir/objects.a
+        C:\\w64devkit\\bin\\ar.exe qc CMakeFiles\\cmTC_cd48a.dir/objects.a @CMakeFiles\\cmTC_cd48a.dir\\objects1.rsp
+        C:\\w64devkit\\bin\\c++.exe -Wl,--whole-archive CMakeFiles\\cmTC_cd48a.dir/objects.a -Wl,--no-whole-archive -o cmTC_cd48a.exe -Wl,--out-implib,libcmTC_cd48a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_cd48a.dir\\linkLibs.rsp
+        make[1]: Leaving directory 'C:/Users/Tina/Desktop/HW3-1/HW3/build/CMakeFiles/CMakeScratch/TryCompile-b4c1sg'
+        
+      exitCode: 0
+...

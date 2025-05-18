@@ -35,7 +35,10 @@ bool Bank::deposit(double amount , double dailylimit){
 
 }
 
-void Bank::getBalance()const{
+double Bank::getBalance()const{
+
+return balance;
+
     
 
 }
