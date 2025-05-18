@@ -12,7 +12,7 @@ class Program{
         static void Run() ;
         static  std::string showItems() ;  
         void Buying(const std::string ItemName , int tedad) ; 
-        ~Program() ; 
+        // ~Program() ; 
 
 };
 

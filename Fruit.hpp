@@ -12,8 +12,8 @@ class Fruit : public Item {
     public:
     Fruit( std::string name ,int p , int a ,std::string me = "kg");
     void buy(int b) override; 
-    std::string getInfo()const override ;
-    std::string get_name()const ; 
+    std::string getInfo() override ;
+    std::string get_name() const; 
     int get_price() const; 
     int get_available()const ; 
     void set_available(int a) ; 

@@ -40,5 +40,4 @@ double Bank::getBalance()const{
 return balance;
 
     
-
 }

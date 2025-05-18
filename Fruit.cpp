@@ -12,11 +12,12 @@ Fruit::Fruit (std::string n , int p , int a , string me) :Item(n,p , a) , measur
         available = a ;
         price = p ; 
         name = n ; 
+        
     }
 }
 
-string Fruit::getInfo()const{
-    return get_name() + " price: " + to_string(get_price()) + ",available: " + to_string(get_available()) + " " + measurment ; 
+string Fruit::getInfo(){
+    return get_name() + " price: " + to_string(get_price()) + "8,available: " + to_string(get_available()) + " " + measurment ; 
 }
 std::string Fruit::get_name()const{
     return name ; 
@@ -31,11 +32,18 @@ void Fruit::set_available(int a){
     available = a ; 
 }
 void Fruit::buy(int b){
+   try {
+
     if ( !is_available())
-        throw runtime_error("item not available") ; 
-    if(b > available)
-        throw runtime_error("not enough item") ; 
+        throw runtime_error("Item is not available") ; 
+    if( b > available)
+        throw runtime_error("Item has sold out completely") ; 
     
     set_available(available - b); 
 
+ }
+
+ catch (exception &e){
+    cout<<e.what();
+}
 }

@@ -14,7 +14,7 @@ class Snack : public Item {
 
     public:
         Snack( std::string name ,int p , int a ,std::string me = "Package");
-        std::string getInfo()const override;
+        std::string getInfo() override;
         std::string get_name()const ; 
         void buy(int b) override;
         int get_price() const; 

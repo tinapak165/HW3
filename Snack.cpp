@@ -14,7 +14,7 @@ Snack::Snack (std::string n , int p , int a , string me) : Item(n , p , a) ,meas
     }
 }
 
-string Snack::getInfo()const{
+string Snack::getInfo(){
     return get_name() + " price: " + to_string(get_price()) + ",available: " + to_string(get_available()) + " " + measurment ; 
 }
 std::string Snack::get_name()const{

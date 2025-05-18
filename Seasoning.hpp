@@ -15,7 +15,7 @@ class Seasoning : public Item {
 
     public:
         Seasoning( std::string name ,int p , int a ,std::string me = "g");
-        std::string getInfo()const override ;
+        std::string getInfo() override ;
         std::string get_name()const ; 
         int get_price() const; 
         void buy(int b) override ; 

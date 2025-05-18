@@ -15,7 +15,7 @@ Seasoning::Seasoning (std::string n , int p , int a , string me) : Item( n , p ,
     }
 }
 
-string Seasoning::getInfo()const{
+string Seasoning::getInfo(){
     return get_name() + " price: " + to_string(get_price()) + ",available: " + to_string(get_available()) + " " + measurment ; 
 }
 std::string Seasoning::get_name()const{

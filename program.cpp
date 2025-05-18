@@ -12,6 +12,7 @@ using namespace std ;
 vector<Item*> Program::items ; 
 vector<string> Program::names ; 
 
+
 string Program::showItems(){
     string result ; 
     for(const auto & item : items)
@@ -40,11 +41,12 @@ void Program::Run(){
 
         while(true){
             cout << showItems() ;
+            cout<<"-----------------------------------\n";
             //cout << "and here is your bank account: " ;//showaccount()?? ; 
-            cout << "what do you want to buy? " ;
+            cout << "what do you want to buy ? (type bye to leave the shop)" ;
             
             cin >> targetItem ; 
-            if(targetItem == "nothing") {
+            if(targetItem == "bye") {
                 cout << "bye bye!" << endl ; 
                 break  ;
             }   
@@ -52,7 +54,7 @@ void Program::Run(){
             auto it  = find(names.begin() , names.end() , targetItem) ; 
     
             if(it != names.end()){
-                cout << "found " << *it << endl  ;  
+                // cout << "found " << *it << endl  ;  
                 found = true ; 
     
             }
@@ -62,12 +64,13 @@ void Program::Run(){
             }
     
             if(found){
+                
                 cout << "how many " << targetItem << " do you want to buy? " ; 
                 cin >> TedadTarget ; 
                 Program p ; 
                 p.Buying(targetItem,  TedadTarget) ;
     
-                 
+                // cout<< " your basket :";  generate this  
                 //cout << "your bank account: " ; //showaccount()
             }
             else
@@ -90,16 +93,19 @@ void Program::Buying(const std::string ItemName , int tedad){
     for(auto item : items){
         if(item ->get_Name() == ItemName){
             item->buy(tedad) ; 
-            cout << "you bought " << tedad << " " << ItemName << " !!" ;
+
+            cout << "you bought " << tedad << " " << ItemName << " !! \n" ;
+            cout<<"-----------------------------------\n";
             return; 
         }
     }
-    cout << "item not found!! " << endl ; 
+    cout << "item not found!! " << endl ;
+     cout<<"-----------------------------------\n";
 }
 
-Program::~Program(){
-    for( auto item : items){
-        delete item ; 
-    }
+// Program::~Program(){
+//     for( auto item : items){
+//         delete item ; 
+//     }
 
-}
+// }

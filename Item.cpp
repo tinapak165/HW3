@@ -3,10 +3,11 @@
 #include "Item.hpp"
 #include <iostream>
 #include <stdexcept>
+#include  <vector>
 
 using namespace std;
 
-std::vector<std::string> Item::names; 
+// std::vector<std::string> names; 
 
 
 Item::Item(std::string n , int a , int p){
@@ -19,10 +20,7 @@ Item::Item(std::string n , int a , int p){
     available = a ;
     price = p ; 
     name = n;
-    names.push_back(name) ;
-
-
-
+   
 }
 void Item::operator-( int i  ){
 
@@ -44,5 +42,9 @@ int Item::getPrice() const {
     return price; 
 }
 
+string Item::get_Name() const {
+    
+    return name;
+}
 
 
