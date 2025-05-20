@@ -8,10 +8,11 @@ class Program{
     private:
         static std::vector<Item*> items ; 
         static std::vector<std::string> names ;
-        static  
+        static std::vector<std::pair<int, std::string>> basket;    
     public:
         static void Run() ;
-        static  std::string showItems() ;  
+        static std::string showItems() ;  
+        void showingBasket(const std::string &item , int tedad) ; 
         void Buying(const std::string ItemName , int tedad) ; 
 
 
