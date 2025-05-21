@@ -7,19 +7,20 @@
 class Personbank : public Bank {
 
     public:
+    Personbank(std::string name, int acc_number, double bal);
 
-    Personbank(std::string , int , int):Bank ( holder_name,  account_number ,  balance )
-    {std::cout<<"persooooonnallll";}
-    bool withdraw(double , double ); //only use for person
-    // bool deposit(double , double ); // only used for shop
-    double getBalance()const;       
+     bool withdraw(double , double ) override ; //only use for person
+     bool deposit(double , double ) override; // only used for shop
+    
+
+    // void change_money();      
     
     
-    private:
-    size_t dailytransfered;
-    size_t account_number;
-    std::string holder_name;
-    double balance ;
+    // private:
+    // // int dailytransfered;
+    // // int account_number;
+    // // std::string holder_name;
+    // // double balance ;
 
 
 

@@ -1,18 +1,27 @@
 #ifndef BANK_HPP
 #define BANK_HPP
+
 #include <string>
 #include <iostream>
 class Bank{
+
     public:
-    Bank (std::string name, size_t account_name , double balance ) {std::cout<<"basededdddd";}
-    bool withdraw(double , double ); //only use for person
-    bool deposit(double , double ); // only used for shop
-    double getBalance()const;
+    Bank (std::string name, int number , double balance );
+    virtual bool withdraw(double , double  ) = 0; //only use for person
+    virtual bool deposit(double , double ) = 0; // only used for shop
+    double getBalance()const ;
+    void setBalance( double);
+    double get_dailytranfered() const;
+    void set_dailytarnsfered( double);
+     
+
+
+    // void change_money();
     
     
     private:
-    size_t dailytransfered;
-    size_t account_number;
+    double dailytransfered = 0 ;
+    int account_number;
     std::string holder_name;
     double balance ;
 
