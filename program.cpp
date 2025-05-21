@@ -20,30 +20,67 @@ string Program::showItems(){
     
     return result ; 
 }
+// void Program::showingBasket(const std::string &item, int tedad) {
+//     if(tedad <=0) return ; //do nothing
+//     bool found ; 
+//     for(auto & ba : basket){
+//         if(item == ba.second){
+//             if(ba.first == 0){
+//                 found = true ;
+//                 break ; 
+//             }
+//             else if(tedad > ba.first){
+//                 found = true ;
+//                 break;
+//             }
+//             else{
+//             ba.first += tedad;
+//             found = true ;      
+//             break;           
+//             }
+//         }
+
+//     }
+
+//     if(!found){
+//         basket.push_back({tedad, item});
+//     }
+
+//     for(const auto& bas : basket) 
+//         cout << bas.first << " " << bas.second << endl;
+// }
+
 
 void Program::showingBasket(const std::string &item, int tedad) {
-    bool found = false  ; 
-    Item *i = new Fruit();
-    if(i->is_available()){
-        found = false ; 
-        for(auto & ba : basket){
-        if(item == ba.second){
-            ba.first += tedad;
-            found = true ; 
+    if(tedad <= 0) return;
+
+    bool found = false;
+    
+    for(auto &ba : basket) {
+        if(item == ba.second && ba.first == 0) {
+            cout << "Item has sold out completely" << endl;
             break;
-        }      
+        }
     }
-}
 
+    for(auto &ba : basket) {
+        if(item == ba.second) {
+            ba.first += tedad;
+            found = true;
+        
+        }
+    }
 
-    if(!found)
+    if(!found) {
         basket.push_back({tedad, item});
+    }
 
     for(const auto& bas : basket) {
-        cout << bas.first << " " << bas.second << endl;
+        if(bas.first > 0) {
+            cout << bas.first << " " << bas.second << " " << endl;
+        }
     }
 }
-
 void Program::Run(){
     try
     {
@@ -81,7 +118,7 @@ void Program::Run(){
                 found = true ; 
             }
             else{
-                cout << "no found" << endl;
+                cout << "not found" << endl;
                 found = false ;  
             }
     
@@ -113,11 +150,10 @@ void Program::Buying(const std::string ItemName , int tedad){
         if(item ->get_Name() == ItemName){
             item->buy(tedad) ; 
 
-            cout << "you bought " << tedad << " " << ItemName << " !! \n" ;
-            cout<<"-----------------------------------\n";
+            cout<< endl << "-----------------------------------\n";
             return; 
         }
     }
     cout << "item not found!! " << endl ;
-     cout<<"-----------------------------------\n";
+    cout<<"-----------------------------------\n";
 }
