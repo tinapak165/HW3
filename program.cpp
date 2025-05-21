@@ -92,7 +92,7 @@ void Program::Run(){
                 found = true ; 
             }
             else{
-                cout << "no found" << endl;
+                cout << "not found" << endl;
                 found = false ;  
             }
             
@@ -156,6 +156,7 @@ void Program::Buying( const std::string ItemName , int tedad){
         }
     }
     cout << "item not found!! " << endl ;
+    cout<<"-----------------------------------\n";
     cout<<"-----------------------------------\n";
 }
 

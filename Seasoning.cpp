@@ -30,8 +30,11 @@ int Seasoning::get_available()const{
 void Seasoning::buy(int b){
     if ( !is_available())
         throw runtime_error("item not available") ; 
-    if(b > available)
+    else if(b > available)
         throw runtime_error("not enough item") ; 
+    else if(b>0)
+        cout << "you bought " << b << " " << get_name() << endl ; 
+
     
     set_available(available - b) ; 
 
