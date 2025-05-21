@@ -12,7 +12,6 @@ class Program{
     public:
         static void Run() ;
         static std::string showItems() ;  
-        void showingBasket(const std::string &item , int tedad) ; 
         void Buying(const std::string ItemName , int tedad) ; 
 
 
