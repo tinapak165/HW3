@@ -22,7 +22,7 @@ bool Personbank::withdraw(double amount , double dailylimit){
         return false; 
     }  
 
-    else if (amount < this->getBalance()){
+    else if (amount > this->getBalance()){
         cerr<<"(not enough balance!!)";
         return false;
     }
