@@ -31,8 +31,6 @@ string Program::showItems(){
     return result ; 
 }
 
-
-
 void Program::SAVEresid(std::string user, std::string itemName, int price, int quantity) { 
     fstream file("UserBasket.txt", ios::app); 
     file << "user: " << user << " " << itemName << " , price " << price << "$, " << quantity << "." << endl ; 
@@ -187,5 +185,3 @@ void Program::Buying( const std::string ItemName , int tedad){
     cout<<"-----------------------------------\n";
    
 }
-
-
