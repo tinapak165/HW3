@@ -32,9 +32,7 @@ void Snack::buy(int b){
     else if(b > available)
         throw runtime_error("not enough item") ; 
     else if(b>0)
-        cout << "you bought " << b << " " << get_name() << endl ; 
-
-    set_available(available - b); 
+        set_available(available - b); 
 }
 void Snack::set_available(int a){
     available = a;
