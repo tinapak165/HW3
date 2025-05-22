@@ -32,8 +32,6 @@ void Fruit::set_available(int a){
     available = a ; 
 }
 
-Fruit::Fruit(){}
-
 void Fruit::buy(int b){
    try {
 
