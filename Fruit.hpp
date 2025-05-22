@@ -17,6 +17,7 @@ class Fruit : public Item {
     int get_price() const; 
     int get_available()const ; 
     void set_available(int a) ; 
+    bool is_available() ; 
     
 
 };
