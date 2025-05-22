@@ -52,8 +52,7 @@ void Program::showingBasket(const std::string &item, int tedad) {
 
 void Program::Run(){
     try
-    {
-        
+    { 
         items.push_back(new Fruit("apple",10,1))  ; 
         names.push_back("apple") ; 
         items.push_back(new Fruit ("kiwi" , 6, 7)) ;
@@ -85,10 +84,6 @@ void Program::Run(){
             auto it  = find(names.begin() , names.end() , targetItem) ; 
             
             if(it != names.end()){
-                
-                //cout << "found " << *it << endl  ; 
-                
-                
                 found = true ; 
             }
             else{
@@ -96,26 +91,18 @@ void Program::Run(){
                 found = false ;  
             }
             
-            
-            
-            
-            if(found){
-                //cout << "your bank account: " ; //showaccount()
-                
+            if(found){                
                 cout << "how many " << targetItem << " do you want to buy? " ; 
                 cin >> TedadTarget ; 
                 
-                
-                 Program p;
-                
+                Program p;
                 p.Buying(targetItem,  TedadTarget) ;
-                
-                
+      
             }
             else
-            cerr << "not found!!" << endl ; 
+                cerr << "not found!!" << endl ; 
             
-            cout <<  endl << "what else do you want to buy? " << endl;        
+            cout << "\nwhat else do you want to buy? " << endl;        
         }
     }
     catch(const exception & e){
@@ -127,30 +114,28 @@ Bank *shop  = new Shopbank ("shop" , 2345 , 0);
 
 void Program::Buying( const std::string ItemName , int tedad){
 
-
-     cout<<"\nperson balance befor :"<<costoumer->getBalance();
+    cout<<"\nperson balance before :"<<costoumer->getBalance();
      
-     for(auto item : items){
-         if(item ->get_Name() == ItemName){
-             item->buy(tedad) ; 
-             double price = item->getPrice();
-            
-             double amount = tedad * price;
-             cout<<"\nit will costs : "<<amount;
-             cout<<" \n balance before  : " <<costoumer->getBalance();
+    for(auto item : items){
+        if(item ->get_Name() == ItemName){
+            int price = item->getPrice();
+            int amount = tedad * price;
+            cout<<"\nit will costs : "<<amount;
+            cout<<" \nbalance before  : " <<costoumer->getBalance();
+            item->buy(tedad) ; 
 
             costoumer->withdraw( amount , 1000 );
             shop->deposit(amount , 10000);
 
 
             
-             cout<<" \nperson balance after : "<<costoumer->getBalance();
+             cout<<"\nperson balance after : "<<costoumer->getBalance();
             
              cout<<"\nshop balance after :"<<shop->getBalance();
             
             
             
-            cout << "you bought " << tedad << " " << ItemName << " !! \n" ;
+            cout << "\nyou bought " << tedad << " " << ItemName << " !! \n" ;
             cout<<"-----------------------------------\n";
             return; 
         }
