@@ -61,7 +61,6 @@ void Program::Run(){
                 found = true ; 
             }
             else{
-                cout << "not found" << endl;
                 found = false ;  
             }
             
@@ -94,12 +93,13 @@ void Program::Buying( const std::string ItemName , int tedad){
         if(item ->get_Name() == ItemName){
             int price = item->getPrice();
             int amount = tedad * price;
-            cout<<"\nit will costs : "<<amount;
+            cout<<"\nit will cost : "<<amount;
             cout<<" \nbalance before  : " <<costoumer->getBalance();
             item->buy(tedad) ; 
 
-            costoumer->withdraw( amount , 1000 );
-            shop->deposit(amount , 10000);
+            
+            if(costoumer->withdraw( amount , 1000 ))
+                shop->deposit(amount , 10000);
 
 
             
