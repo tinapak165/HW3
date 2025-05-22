@@ -14,12 +14,13 @@ class Snack : public Item {
 
     public:
         Snack( std::string name ,int p , int a ,std::string me = "Package");
-        std::string getInfo() override;
-        std::string get_name()const ; 
-        void buy(int b) override;
-        int get_price() const; 
-        int get_available()const ; 
-        void set_available(int a) ; 
+        void buy(int b) override; 
+        std::string getInfo() override ;
+        std::string get_Name() const override ;  
+        int getPrice() const override; 
+        int get_available()const override ; 
+        void set_available(int a) override; 
+        bool is_available() const override; 
 
 };
 
