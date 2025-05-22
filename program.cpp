@@ -18,7 +18,7 @@
 #include <vector>
 using namespace std ;
 
-
+//SALAM TINAAA
 
 vector<Item*> Program::items ; 
 vector<string> Program::names ; 
