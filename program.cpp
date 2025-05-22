@@ -27,29 +27,6 @@ string Program::showItems(){
     return result ; 
 }
 
-void Program::showingBasket(const std::string &item, int tedad) {
-    bool found = false  ; 
-    Item *i = new Fruit();
-    if(i->is_available()){
-        found = false ; 
-        for(auto & ba : basket){
-            if(item == ba.second){
-                ba.first += tedad;
-                found = true ; 
-                break;
-            }      
-        }
-    } delete i;
-    
-    
-    if(!found)
-    basket.push_back({tedad, item});
-
-    for(const auto& bas : basket) {
-        cout << bas.first << " " << bas.second << endl;
-    }
-}
-
 void Program::Run(){
     try
     { 
@@ -72,7 +49,6 @@ void Program::Run(){
             cout << showItems() ;
             cout<<"-----------------------------------\n";
             
-            //cout << "and here is your bank account: " ;//  ; 
             cout << "what do you want to buy ? (type bye to leave the shop)" ;
             
             cin >> targetItem ; 
