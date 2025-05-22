@@ -15,13 +15,13 @@ class Seasoning : public Item {
 
     public:
         Seasoning( std::string name ,int p , int a ,std::string me = "g");
+        void buy(int b) override; 
         std::string getInfo() override ;
-        std::string get_name()const ; 
-        int get_price() const; 
-        void buy(int b) override ; 
-        int get_available()const ; 
-        void set_available(int a) ; 
-
+        std::string get_Name() const override ;  
+        int getPrice() const override; 
+        int get_available()const override ; 
+        void set_available(int a) override; 
+        bool is_available() const override; 
 };
 
 #endif
