@@ -18,8 +18,6 @@
 #include <vector>
 using namespace std ;
 
-//SALAM TINAAA
-
 vector<Item*> Program::items ; 
 vector<string> Program::names ; 
 
@@ -89,6 +87,8 @@ void Program::Run(){
             if(found){                
                 cout << "how many " << targetItem << " do you want to buy? " ; 
                 cin >> TedadTarget ; 
+                if(TedadTarget <0)
+                    return ; 
                 
                 Program p;
                 p.Buying(targetItem,  TedadTarget) ;
