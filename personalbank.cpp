@@ -1,7 +1,8 @@
 #include "bank.hpp"
 #include "personalbank.hpp"
-
-Personbank::Personbank(std::string name, int acc_number, double bal): Bank(name, acc_number, bal) {}
+#include <iostream>
+using namespace std ; 
+Personbank::Personbank(string name, int acc_number, double bal): Bank(name, acc_number, bal) {}
 
 bool Personbank::withdraw(double amount , double dailylimit){
     
@@ -12,17 +13,19 @@ bool Personbank::withdraw(double amount , double dailylimit){
     double dailytransfered = this->get_dailytranfered();
     
     if (amount <= 0 || amount > dailylimit ){
-        std::cout<<"sorry. daily transfer limit is passed .";
-        return false; }
+        cerr<<"sorry. daily transfer limit is passed .";
+        return false; 
+    }
 
     else if (amount + this->get_dailytranfered() > dailylimit ) {
-        std::cout<< "sorry. daily transfer limit is passed .";
-        return false; }  
+        cerr<< "sorry. daily transfer limit is passed .";
+        return false; 
+    }  
 
-    else if (amount > this->getBalance()){
-        std::cout<<"not enough balance.";
+    else if (amount < this->getBalance()){
+        cerr<<"(not enough balance!!)";
         return false;
-    }    
+    }
         
      
     else {
