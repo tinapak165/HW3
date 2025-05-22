@@ -12,9 +12,10 @@
 #include "EUR.hpp"
 #include <memory>
 #include <algorithm>
+#include <fstream>
+#include <sstream>
 #include <iostream>
 #include <vector>
-
 using namespace std ;
 
 
@@ -30,16 +31,32 @@ string Program::showItems(){
     return result ; 
 }
 
+void Program::SAVEresid(std::string user, std::string itemName, int price, int quantity) { 
+    fstream file("UserBasket.txt", ios::app); 
+    file << "user: " << user << " " << itemName << " , price " << price << "$, " << quantity << "." << endl ; 
+    file.close() ; 
+}
+void Program::SHOWresid(){
+    cout << "-------------" << endl ;  
+    cout << "your resid: " << endl ; 
+    fstream file("UserBasket.txt", ios::in) ; 
+    string line ; 
+    while(getline(file , line))
+        cout << line << endl ;
+    cout << "-------------" << endl ; 
+    file.close() ;  
+}
+
 void Program::Run(){
     try
     { 
-        items.push_back(new Fruit("apple",10 ,50))  ; 
+        items.push_back(new Fruit("apple",10,1))  ; 
         names.push_back("apple") ; 
-        items.push_back(new Fruit ("kiwi" , 20 , 50)) ;
+        items.push_back(new Fruit ("kiwi" , 6, 7)) ;
         names.push_back("kiwi") ;  
-        items.push_back(new Snack("sandwitch" , 40 , 50)) ;
+        items.push_back(new Snack("sandwitch" , 4 , 15)) ;
         names.push_back("sandwitch") ; 
-        items.push_back(new Seasoning("salt" , 5 , 50)) ;  
+        items.push_back(new Seasoning("salt" , 4 , 12)) ;  
         names.push_back("salt") ; 
         
         string targetItem  ;
@@ -87,7 +104,7 @@ void Program::Run(){
         std::cerr << e.what() << '\n';
     }
 }
-Bank *costoumer = new  Personbank ("tina" ,1234 , 1500 );
+Bank *costoumer = new  Personbank ("tina" ,1234 , 10000 );
 Bank *shop  = new Shopbank ("shop" , 2345 , 0);
 
 void Program::Buying( const std::string ItemName , int tedad){
@@ -96,9 +113,11 @@ void Program::Buying( const std::string ItemName , int tedad){
      
     for(auto item : items){
         if(item ->get_Name() == ItemName){
+            if(tedad> item->get_available() || !(item->is_available()))
+                throw runtime_error("\nwe dont have that item anymore.") ; 
             int price = item->getPrice();
             int amount = tedad * price;
-            cout<<"\nit will cost : "<<amount<<"$" <<"( "<<amount/2<<" euro , "<<amount*10<<"rials )";
+            cout<<"\nit will cost : "<<amount;
             
             double user_amount;
             string currency_code;
@@ -111,14 +130,13 @@ void Program::Buying( const std::string ItemName , int tedad){
 
             unique_ptr<Currency> payment;
 
+            
             if (currency_code == "IRR" || currency_code == "irr") {
                 payment = make_unique<IRR>(user_amount);
             } else if (currency_code == "USD" || currency_code == "usd") {
                 payment = make_unique<USD>(user_amount);
             } else if (currency_code == "EUR" || currency_code == "eur") {
-                EUR eur(user_amount);
-                USD usd = eur * 1.0;  // استفاده از operator*
-                payment = make_unique<USD>(usd);  // چون shop و withdrawal با Currency کار می‌کنن
+                payment = make_unique<EUR>(user_amount);
             } else {
                 cerr << "Unknown currency entered.\n";
                 return;
@@ -133,15 +151,13 @@ void Program::Buying( const std::string ItemName , int tedad){
 
            
 
-            if (costoumer->withdraw(std::move(payment), 1000) || item->is_available()) {
+            if (costoumer->withdraw(std::move(payment), 1000)) {
                 
                 auto usd_payment = make_unique<USD>(amount);
                 shop->deposit(std::move(usd_payment), 10000);
-              
-                double d= item->get_available();
-                cout<<"mojoodi item:"<<d;
 
-                
+                cout << "\nYou bought " << tedad << " " << ItemName << " !!\n";
+
                 double change = payment_in_usd - amount;
                 if (change > 0.0) {
                     auto refund = make_unique<USD>(change);
@@ -150,23 +166,20 @@ void Program::Buying( const std::string ItemName , int tedad){
                 }
                 
 
-                item->buy(tedad) ; 
             }
             
            
+            item->buy(tedad) ; 
+            SAVEresid("tina" , ItemName , amount , tedad) ;
+            SHOWresid() ;  
 
-            
-          
-
-
-            
              cout<<"\nperson balance after : "<<costoumer->getBalance()<<"$";
             
              cout<<"\nshop balance after :"<<shop->getBalance()<<"$";
             
             
             
-            
+            // cout<<"\n-----------------------------------\n";
             return; 
         }
     }
