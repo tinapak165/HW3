@@ -31,19 +31,22 @@ int Fruit::get_available()const{
 void Fruit::set_available(int a){
     available = a ; 
 }
+bool Fruit::is_available(){
+    return (available > 0) ; 
+}
 
 void Fruit::buy(int b){
    try {
 
     if(!is_available())
         throw runtime_error("Item is not available") ; 
-    else if( b > available)
+    else if( b > get_available())
         throw runtime_error("Item has sold out completely") ; 
-    else if(b>0){
-        set_available(available - b); 
-        
-        cout << "\n you bought the item succesfully !!\n";
-    }
+    else if(b<=0)
+        throw runtime_error("invalid quantity!");
+    set_available((available - b)); 
+    cout << "\n you bought the item succesfully !!\n";
+    
 
 
  }
