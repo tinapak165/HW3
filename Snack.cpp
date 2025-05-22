@@ -15,12 +15,12 @@ Snack::Snack (std::string n , int p , int a , string me) : Item(n , p , a) ,meas
 }
 
 string Snack::getInfo(){
-    return get_name() + " price: " + to_string(get_price()) + ",available: " + to_string(get_available()) + " " + measurment ; 
+    return get_Name() + " price: " + to_string(getPrice()) + ",available: " + to_string(get_available()) + " " + measurment ; 
 }
-std::string Snack::get_name()const{
+std::string Snack::get_Name()const{
     return name ; 
 }
-int Snack::get_price()const{
+int Snack::getPrice()const{
     return price ; 
 }
 int Snack::get_available()const{
@@ -36,4 +36,7 @@ void Snack::buy(int b){
 }
 void Snack::set_available(int a){
     available = a;
+}
+bool Snack::is_available()const{
+    return available>0 ; 
 }
