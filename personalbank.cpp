@@ -4,25 +4,26 @@
 using namespace std ; 
 Personbank::Personbank(string name, int acc_number, double bal): Bank(name, acc_number, bal) {}
 
-bool Personbank::withdraw(double amount , double dailylimit){
+bool Personbank::withdraw(std::unique_ptr<Currency> amount , double dailylimit){
     
-    
+    double amount_usd = amount->to_usd();
+
     double newbalance;
     double balance = this->getBalance();
     double dailytransfered_2 ;
     double dailytransfered = this->get_dailytranfered();
     
-    if (amount <= 0 || amount > dailylimit ){
+    if (amount_usd <= 0 || amount_usd > dailylimit ){
         cerr<<"sorry. daily transfer limit is passed .";
         return false; 
     }
 
-    else if (amount + this->get_dailytranfered() > dailylimit ) {
+    else if (amount_usd + this->get_dailytranfered() > dailylimit ) {
         cerr<< "sorry. daily transfer limit is passed .";
         return false; 
     }  
 
-    else if (amount < this->getBalance()){
+    else if (amount_usd < this->getBalance()){
         cerr<<"(not enough balance!!)";
         return false;
     }
@@ -30,14 +31,14 @@ bool Personbank::withdraw(double amount , double dailylimit){
      
     else {
 
-        newbalance = balance - amount;
+        newbalance = balance - amount_usd;
         this->setBalance(newbalance);
         
-        dailytransfered_2= dailytransfered + amount;
+        dailytransfered_2= dailytransfered + amount_usd;
         this->set_dailytarnsfered(dailytransfered_2);
         
         return true;
     }
 }
 
-bool Personbank::deposit(double amount , double dailylimit){return true;}
+bool Personbank::deposit(std::unique_ptr<Currency> amount , double dailylimit){return true;}

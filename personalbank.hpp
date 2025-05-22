@@ -9,8 +9,8 @@ class Personbank : public Bank {
     public:
     Personbank(std::string name, int acc_number, double bal);
 
-     bool withdraw(double , double ) override ; //only use for person
-     bool deposit(double , double ) override; // only used for shop
+     bool withdraw(std::unique_ptr<Currency> , double ) override ; //only use for person
+     bool deposit(std::unique_ptr<Currency> , double ) override; // only used for shop
     
 
     // void change_money();      

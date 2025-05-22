@@ -6,6 +6,11 @@
 #include "bank.hpp"
 #include "personalbank.hpp"
 #include "shopbank.hpp"
+#include "currency.hpp"
+#include "USD.hpp"
+#include "IRR.hpp"
+#include "EUR.hpp"
+#include <memory>
 #include <algorithm>
 #include <iostream>
 #include <vector>
@@ -82,7 +87,7 @@ void Program::Run(){
         std::cerr << e.what() << '\n';
     }
 }
-Bank *costoumer = new  Personbank ("tina" ,1234 , 100 );
+Bank *costoumer = new  Personbank ("tina" ,1234 , 10000 );
 Bank *shop  = new Shopbank ("shop" , 2345 , 0);
 
 void Program::Buying( const std::string ItemName , int tedad){
@@ -94,14 +99,41 @@ void Program::Buying( const std::string ItemName , int tedad){
             int price = item->getPrice();
             int amount = tedad * price;
             cout<<"\nit will cost : "<<amount;
+            
+            double user_amount;
+            string currency_code;
+            
+            cout << "\n Enter currency (USD / EUR / IRR): ";
+            cin >> currency_code;
+            cout << "\n Enter the amount you want to pay: ";
+            cin >> user_amount;
+
+
+            unique_ptr<Currency> payment;
+
+            
+            if (currency_code == "IRR" || currency_code == "IRR") {
+                payment = make_unique<IRR>(user_amount);
+            }
+
+            if (payment->to_usd() < amount) {
+                cerr << " payment is not enough. \n";
+                return;
+            }
+
+            if (costoumer->withdraw(std::move(payment), 1000)) {
+                
+                auto usd_payment = make_unique<IRR>(amount);
+                shop->deposit(std::move(usd_payment), 10000);
+
+                cout << "\nYou bought " << tedad << " " << ItemName << " !!\n";
+            }
+            
             cout<<" \nbalance before  : " <<costoumer->getBalance();
             item->buy(tedad) ; 
 
             
-            if(costoumer->withdraw( amount , 1000 )){
-                shop->deposit(amount , 10000);
-                cout << "\nyou bought " << tedad << " " << ItemName << " !! \n" ;
-            }
+          
 
 
             
@@ -111,13 +143,13 @@ void Program::Buying( const std::string ItemName , int tedad){
             
             
             
-            cout<<"\n-----------------------------------\n";
+            // cout<<"\n-----------------------------------\n";
             return; 
         }
     }
     cout << "item not found!! " << endl ;
     cout<<"-----------------------------------\n";
-    cout<<"-----------------------------------\n";
+   
 }
 
 

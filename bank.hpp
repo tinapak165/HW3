@@ -3,12 +3,14 @@
 
 #include <string>
 #include <iostream>
+#include <memory>
+#include "currency.hpp"
 class Bank{
 
     public:
     Bank (std::string name, int number , double balance );
-    virtual bool withdraw(double , double  ) = 0; //only use for person
-    virtual bool deposit(double , double ) = 0; // only used for shop
+    virtual bool withdraw(std::unique_ptr<Currency> , double  ) = 0; //only use for person
+    virtual bool deposit(std::unique_ptr<Currency> , double ) = 0; // only used for shop
     double getBalance()const ;
     void setBalance( double);
     double get_dailytranfered() const;
