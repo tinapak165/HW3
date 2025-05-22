@@ -98,7 +98,7 @@ void Program::Buying( const std::string ItemName , int tedad){
         if(item ->get_Name() == ItemName){
             int price = item->getPrice();
             int amount = tedad * price;
-            cout<<"\nit will cost : "<<amount<<"$";
+            cout<<"\nit will cost : "<<amount;
             
             double user_amount;
             string currency_code;
@@ -110,39 +110,46 @@ void Program::Buying( const std::string ItemName , int tedad){
 
 
             unique_ptr<Currency> payment;
-        // if (currency code =! IRR ||UDS || EUR 
+
             
             if (currency_code == "IRR" || currency_code == "irr") {
                 payment = make_unique<IRR>(user_amount);
-            }
-
-            if (payment->to_usd() < amount) {
-                cerr << " payment is not enough. \n";
+            } else if (currency_code == "USD" || currency_code == "usd") {
+                payment = make_unique<USD>(user_amount);
+            } else if (currency_code == "EUR" || currency_code == "eur") {
+                payment = make_unique<EUR>(user_amount);
+            } else {
+                cerr << "Unknown currency entered.\n";
                 return;
             }
 
-            if (costoumer->withdraw(std::move(payment),1000)) {
-                
-                auto usd_payment = make_unique<IRR>(amount);
+            double payment_in_usd = payment->to_usd();
 
+            if (payment_in_usd < amount) {
+                cerr << "Payment is not enough.\n";
+                 return;
+            }
+
+           
+
+            if (costoumer->withdraw(std::move(payment), 1000)) {
+                
+                auto usd_payment = make_unique<USD>(amount);
                 shop->deposit(std::move(usd_payment), 10000);
 
                 cout << "\nYou bought " << tedad << " " << ItemName << " !!\n";
-                
-                double payment_usd = payment->to_usd();
-                
-                double change = payment_usd - amount;
 
-                cout<<" your change is"<<change;
+                double change = payment_in_usd - amount;
+                if (change > 0.0) {
+                    auto refund = make_unique<USD>(change);
+                    costoumer->deposit(std::move(refund), 0);
+                    cout << "Refunded $" << change << " to customer account.\n";
+                }
+                
 
-                // if (change > 0.0) {
-                //     unique_ptr<Currency> refund = std::make_unique<USD>(change);
-                //     costoumer->deposit(std::move(refund), 0);
-                //     cout << "Refunded " << change << "$ to customer account.\n";
-                // }
             }
             
-            cout<<" \nbalance before  : " <<costoumer->getBalance();
+           
             item->buy(tedad) ; 
 
             
@@ -150,14 +157,13 @@ void Program::Buying( const std::string ItemName , int tedad){
 
 
             
-             cout<<"\nperson balance after : "<<costoumer->getBalance();
+             cout<<"\nperson balance after : "<<costoumer->getBalance()<<"$";
             
-             cout<<"\nshop balance after :"<<shop->getBalance();
+             cout<<"\nshop balance after :"<<shop->getBalance()<<"$";
             
-            cout<<"\n daily transfer "<<costoumer->get_dailytranfered();
+            
             
             // cout<<"\n-----------------------------------\n";
-        
             return; 
         }
     }
