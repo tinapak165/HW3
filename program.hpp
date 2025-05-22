@@ -12,7 +12,6 @@ class Program{
     
     static std::vector<Item*> items ; 
     static std::vector<std::string> names ;
-    static std::vector<std::pair<int, std::string>> basket; 
 
     public:
        
