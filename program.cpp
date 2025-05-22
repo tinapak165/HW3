@@ -98,8 +98,10 @@ void Program::Buying( const std::string ItemName , int tedad){
             item->buy(tedad) ; 
 
             
-            if(costoumer->withdraw( amount , 1000 ))
+            if(costoumer->withdraw( amount , 1000 )){
                 shop->deposit(amount , 10000);
+                cout << "\nyou bought " << tedad << " " << ItemName << " !! \n" ;
+            }
 
 
             
@@ -109,8 +111,7 @@ void Program::Buying( const std::string ItemName , int tedad){
             
             
             
-            cout << "\nyou bought " << tedad << " " << ItemName << " !! \n" ;
-            cout<<"-----------------------------------\n";
+            cout<<"\n-----------------------------------\n";
             return; 
         }
     }
