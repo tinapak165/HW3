@@ -14,7 +14,8 @@ class Program{
     static std::vector<std::string> names ;
 
     public:
-       
+        void SHOWresid() ; 
+        void SAVEresid(std::string user , std::string itemName , int price , int available) ; 
         static void Run() ;
         static std::string showItems() ;  
         void Buying( const std::string ItemName , int tedad) ; 
