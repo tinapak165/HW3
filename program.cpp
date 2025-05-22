@@ -17,8 +17,6 @@ using namespace std ;
 vector<Item*> Program::items ; 
 vector<string> Program::names ; 
 
-vector<pair<int,string>> Program::basket;    
-
 string Program::showItems(){
     string result ; 
     for(const auto & item : items)
