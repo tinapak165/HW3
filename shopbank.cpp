@@ -15,7 +15,7 @@ bool Shopbank::deposit(double amount , double dailylimit){
         std::cout<<"sorry. daily transfer limit is passed .";
         return false; }
 
-    if (amount + this->get_dailytranfered() > dailylimit ) {
+    else if (amount + this->get_dailytranfered() > dailylimit ) {
         std::cout<< "sorry. daily transfer limit is passed .";
         return false; }  
 
