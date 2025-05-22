@@ -33,13 +33,13 @@ string Program::showItems(){
 void Program::Run(){
     try
     { 
-        items.push_back(new Fruit("apple",10,1))  ; 
+        items.push_back(new Fruit("apple",10 ,50))  ; 
         names.push_back("apple") ; 
-        items.push_back(new Fruit ("kiwi" , 6, 7)) ;
+        items.push_back(new Fruit ("kiwi" , 20 , 50)) ;
         names.push_back("kiwi") ;  
-        items.push_back(new Snack("sandwitch" , 4 , 15)) ;
+        items.push_back(new Snack("sandwitch" , 40 , 50)) ;
         names.push_back("sandwitch") ; 
-        items.push_back(new Seasoning("salt" , 4 , 12)) ;  
+        items.push_back(new Seasoning("salt" , 5 , 50)) ;  
         names.push_back("salt") ; 
         
         string targetItem  ;
@@ -87,7 +87,7 @@ void Program::Run(){
         std::cerr << e.what() << '\n';
     }
 }
-Bank *costoumer = new  Personbank ("tina" ,1234 , 10000 );
+Bank *costoumer = new  Personbank ("tina" ,1234 , 1500 );
 Bank *shop  = new Shopbank ("shop" , 2345 , 0);
 
 void Program::Buying( const std::string ItemName , int tedad){
@@ -98,7 +98,7 @@ void Program::Buying( const std::string ItemName , int tedad){
         if(item ->get_Name() == ItemName){
             int price = item->getPrice();
             int amount = tedad * price;
-            cout<<"\nit will cost : "<<amount;
+            cout<<"\nit will cost : "<<amount<<"$" <<"( "<<amount/2<<" euro , "<<amount*10<<"rials )";
             
             double user_amount;
             string currency_code;
@@ -132,12 +132,11 @@ void Program::Buying( const std::string ItemName , int tedad){
 
            
 
-            if (costoumer->withdraw(std::move(payment), 1000)) {
+            if (costoumer->withdraw(std::move(payment), 1000) || item->is_available()) {
                 
                 auto usd_payment = make_unique<USD>(amount);
                 shop->deposit(std::move(usd_payment), 10000);
 
-                cout << "\nYou bought " << tedad << " " << ItemName << " !!\n";
 
                 double change = payment_in_usd - amount;
                 if (change > 0.0) {
@@ -147,10 +146,10 @@ void Program::Buying( const std::string ItemName , int tedad){
                 }
                 
 
+                item->buy(tedad) ; 
             }
             
            
-            item->buy(tedad) ; 
 
             
           
@@ -161,7 +160,7 @@ void Program::Buying( const std::string ItemName , int tedad){
             
              cout<<"\nshop balance after :"<<shop->getBalance()<<"$";
             
-            
+            cout<<"daily tranfer" <<
             
             // cout<<"\n-----------------------------------\n";
             return; 

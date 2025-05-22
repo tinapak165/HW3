@@ -39,8 +39,12 @@ void Fruit::buy(int b){
         throw runtime_error("Item is not available") ; 
     else if( b > available)
         throw runtime_error("Item has sold out completely") ; 
-    else if(b>0)
+    else if(b>0){
         set_available(available - b); 
+        
+        cout << "\n you bought the item succesfully !!\n";
+    }
+
 
  }
 
