@@ -1,6 +1,5 @@
 #ifndef FRUIT_H
 #define FRUIT_H
-
 #include <string>
 #include <vector>
 #include "Item.hpp"
@@ -23,5 +22,4 @@ class Fruit : public Item {
         bool is_available() const override; 
 
 };
-
 #endif
