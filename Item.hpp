@@ -7,23 +7,20 @@ class Item {
     private : 
 
         int price;
-
         std::string name ; 
-
         int masurment;
-
         int available;
+        
     public:
         Item(std::string , int ,int );
-        Item() ;
         void operator-( int i);
-        bool is_available() const;
+        bool virtual is_available() const;
         virtual void buy(int b) = 0 ;
         virtual std::string getInfo() = 0;  
-        int get_available() const ; 
-        int getPrice() const ; 
-        std::string get_Name() const ; 
-
+        int virtual get_available() const = 0 ; 
+        int virtual getPrice() const ; 
+        std::string virtual get_Name() const =0 ;
+        void virtual set_available(int a) = 0 ;  
 
 };
 #endif
