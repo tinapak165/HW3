@@ -20,21 +20,3 @@ void Item::operator-( int i  ){
     this->available = this->available - i ;
 
 }
-bool Item::is_available()const{
-
-    return available > 0 ; 
-
-}
-int Item::get_available() const {
-    return available; 
-}
-int Item::getPrice() const { 
-    return price; 
-}
-
-string Item::get_Name() const {
-    
-    return name;
-}
-
-
