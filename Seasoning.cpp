@@ -16,12 +16,12 @@ Seasoning::Seasoning (std::string n , int p , int a , string me) : Item( n , p ,
 }
 
 string Seasoning::getInfo(){
-    return get_name() + " price: " + to_string(get_price()) + ",available: " + to_string(get_available()) + " " + measurment ; 
+    return get_Name() + " price: " + to_string(getPrice()) + ",available: " + to_string(get_available()) + " " + measurment ; 
 }
-std::string Seasoning::get_name()const{
+std::string Seasoning::get_Name()const{
     return name ; 
 }
-int Seasoning::get_price()const{
+int Seasoning::getPrice()const{
     return price ; 
 }
 int Seasoning::get_available()const{
@@ -38,4 +38,7 @@ void Seasoning::buy(int b){
 }
 void Seasoning::set_available(int a){
     available = a ; 
+}
+bool Seasoning::is_available() const{
+    return available > 0 ; 
 }
