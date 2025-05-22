@@ -17,12 +17,12 @@ Fruit::Fruit (std::string n , int p , int a , string me) :Item(n,p , a) , measur
 }
 
 string Fruit::getInfo(){
-    return get_name() + " price: " + to_string(get_price()) + " available: " + to_string(get_available()) + " " + measurment ; 
+    return get_Name() + " price: " + to_string(getPrice()) + " available: " + to_string(get_available()) + " " + measurment ; 
 }
-std::string Fruit::get_name()const{
+std::string Fruit::get_Name()const{
     return name ; 
 }
-int Fruit::get_price()const{
+int Fruit::getPrice()const{
     return price ; 
 }
 int Fruit::get_available()const{
@@ -31,7 +31,7 @@ int Fruit::get_available()const{
 void Fruit::set_available(int a){
     available = a ; 
 }
-bool Fruit::is_available(){
+bool Fruit::is_available() const{
     return (available > 0) ; 
 }
 
