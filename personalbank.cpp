@@ -15,11 +15,11 @@ bool Personbank::withdraw(double amount , double dailylimit){
         std::cout<<"sorry. daily transfer limit is passed .";
         return false; }
 
-    if (amount + this->get_dailytranfered() > dailylimit ) {
+    else if (amount + this->get_dailytranfered() > dailylimit ) {
         std::cout<< "sorry. daily transfer limit is passed .";
         return false; }  
 
-    if (amount > this->getBalance()){
+    else if (amount > this->getBalance()){
         std::cout<<"not enough balance.";
         return false;
     }    
