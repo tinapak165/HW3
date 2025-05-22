@@ -40,4 +40,17 @@ bool Shopbank::deposit(std::unique_ptr<Currency> amount , double dailylimit){
         }
 }
 
-bool Shopbank::withdraw(std::unique_ptr<Currency> amount , double limit){return true;}
+bool Shopbank::withdraw(std::unique_ptr<Currency> amount , double limit){
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    return true;}
