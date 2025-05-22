@@ -14,7 +14,7 @@ class Item {
     public:
         Item(std::string , int ,int );
         void operator-( int i);
-        bool virtual is_available() const;
+        bool virtual is_available() const = 0;
         virtual void buy(int b) = 0 ;
         virtual std::string getInfo() = 0;  
         int virtual get_available() const = 0 ; 
